@@ -1,0 +1,41 @@
+{
+  "name": "openhim-mediator-transformation",
+  "version": "0.1.0",
+  "description": "A transformation mediator",
+  "scripts": {
+    "start": "node lib/index.js"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "^1.10.2",
+    "confit": "^2.0.3",
+    "express": "^4.16.3",
+    "express-remove-route": "^0.1.1",
+    "graceful-fs": "^4.1.2",
+    "latest-version": "^2.0.0",
+    "mkdirp": "^0.5.0",
+    "needle": "^0.10.0",
+    "node-statsd": "^0.1.1",
+    "on-finished": "^2.2.0",
+    "openhim-mediator-utils": "^0.2.3",
+    "server-graceful-shutdown": "^0.1.2",
+    "type-is": "^1.5.5",
+    "winston": "^1.1.2"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "openhim",
+    "mediator",
+    "transformation"
+  ],
+  "devDependencies": {
+    "jshint": "^2.9.2",
+    "rewire": "^2.5.1",
+    "tap": "^2.3.4"
+  },
+  "author": ""
+}

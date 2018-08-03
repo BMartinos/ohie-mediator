@@ -1,0 +1,56 @@
+{
+  "port": 4003,
+  "heartbeat": true,
+  "register": true,
+  "host": "",
+  "endpoints": [],
+  "log_level": "info",
+  "statsd": {},
+  "api": {
+    "apiURL": "https://localhost:8080",
+    "username": "root@openhim.org",
+    "password": "him123",
+    "trustSelfSigned": true
+  },
+  "mediatorConf": {
+    "urn": "urn:uuid:a15c3d48-0686-4c9b-b375-f68d2f244a33",
+    "version": "0.1.0",
+    "name": "Transformation",
+    "description": "A message transformation mediator",
+    "defaultChannelConfig": [],
+    "endpoints": [
+      {
+        "name": "Tronsformation",
+        "host": "localhost",
+        "path": "/transform",
+        "port": "4002",
+        "primary": true,
+        "type": "http"
+      }
+    ],
+    "configDefs": [
+      {
+        "param": "settings",
+        "displayName": "Settings",
+        "description": "Mediator Settings",
+        "type": "struct",
+        "array": true,
+        "template": [
+          {
+            "param": "transform",
+            "displayName": "Transform",
+            "description": "Should this transaction be transformed?",
+            "type": "bool"
+          }
+        ]
+      }
+    ],
+    "config": {
+      "settings": [
+        {
+          "settings": "true"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "urn": "urn",
+    "version": "0.0.1",
+    "name": "transformation",
+    "description": "transformation",
+    "defaultChannelConfig": [
+      {
+        "name": "transformation",
+        "urlPattern": "/transform",
+        "alerts": [],
+        "txRerunAcl": [],
+        "txViewFullAcl": [],
+        "txViewAcl": [],
+        "properties": [],
+        "matchContentTypes": [],
+        "routes": [
+          {
+            "name": "transformation Route",
+            "host": "localhost",
+            "port": "3000",
+            "primary": true,
+            "type": "http"
+          }
+        ],
+        "allow": [
+          "admin"
+        ],
+        "type": "http"
+      }
+    ],
+    "endpoints": [
+      {
+        "name": "transformation Route",
+        "host": "localhost",
+        "path": "/",
+        "port": "3001",
+        "primary": true,
+        "type": "http"
+      }
+    ],
+    "configDefs": [
+      {
+        "param": "upstreamUrl",
+        "displayName": "Upstream URL",
+        "description": "The URL of the service upstream of the mediator",
+        "type": "string",
+        "template": []
+      }
+    ],
+    "config": {
+      "upstreamUrl": "http://sampleApplication:7001"
+    }
+  }
